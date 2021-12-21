@@ -1,0 +1,39 @@
+{
+    "name": "owenvoke/socialite-unstoppable-domains",
+    "type": "library",
+    "description": "An Unstoppable Domains provider for Laravel Socialite",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "socialiteproviders/manager": "~4.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21",
+        "phpstan/phpstan": "^1.2",
+        "symfony/var-dumper": "^5.3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "OwenVoke\\UnstoppableDomainsSocialite\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OwenVoke\\UnstoppableDomainsSocialite\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test:types": "phpstan analyse --ansi --memory-limit=-1",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
