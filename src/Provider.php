@@ -12,9 +12,14 @@ class Provider extends AbstractProvider
     public const IDENTIFIER = 'UNSTOPPABLE_DOMAINS';
     private const URL = 'https://auth.unstoppabledomains.com';
 
+    /** {@inheritdoc} */
     protected $scopeSeparator = ' ';
 
+    /** {@inheritdoc} */
     protected $scopes = ['openid', 'email', 'wallet'];
+
+    /** {@inheritdoc} */
+    protected $usesPKCE = true;
 
     /** {@inheritdoc} */
     protected function getAuthUrl($state)
