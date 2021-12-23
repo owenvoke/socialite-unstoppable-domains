@@ -52,13 +52,25 @@ You should now be able to use the provider like you would regularly use Socialit
 return Socialite::driver('unstoppable_domains')->with(['login_hint' => $domain])->redirect();
 ```
 
-Note, you are required to pass in the `login_hint` which is the domain that the user provided.
+> Note, you are required to pass in the `login_hint` which is the domain that the user provided.
+
+By default the `email:optional` scope is provided, if you want to require an email address to be returned, use the following:
+
+```php
+return Socialite::driver('unstoppable_domains')->with(['login_hint' => $domain])->scopes(['email'])->redirect();
+```
 
 ### Returned User fields
 
-- `preferred_username`: The preferred username of the user
-- `email`: The email address of the user
+- `id`: The id (domain) of the authenticated user
+- `email`: The email address of the user (optional by default)
 - `wallet_address`: The wallet address of the user
+- `user`
+  - `sub`: The domain of the authenticated user
+  - `wallet_address`: The wallet address of the user
+  - `wallet_type_hint`: The method of wallet authentication the user used
+  - `email`: The email address of the user (optional by default)
+  - `email_verified`: A boolean stating whether the user's email has been verified (optional by default)
 
 ## Change log
 

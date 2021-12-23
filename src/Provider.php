@@ -16,7 +16,7 @@ class Provider extends AbstractProvider
     protected $scopeSeparator = ' ';
 
     /** {@inheritdoc} */
-    protected $scopes = ['openid', 'email', 'wallet'];
+    protected $scopes = ['openid', 'email:optional', 'wallet'];
 
     /** {@inheritdoc} */
     protected $usesPKCE = true;
