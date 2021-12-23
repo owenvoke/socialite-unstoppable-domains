@@ -63,6 +63,7 @@ return Socialite::driver('unstoppable_domains')->with(['login_hint' => $domain])
 ### Returned User fields
 
 - `id`: The id (domain) of the authenticated user
+- `token`: The token of the authenticated user
 - `email`: The email address of the user (optional by default)
 - `wallet_address`: The wallet address of the user
 - `user`
