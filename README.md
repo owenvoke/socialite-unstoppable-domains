@@ -49,8 +49,10 @@ protected $listen = [
 You should now be able to use the provider like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::driver('unstoppable_domains')->redirect();
+return Socialite::driver('unstoppable_domains')->with(['login_hint' => $domain])->redirect();
 ```
+
+Note, you are required to pass in the `login_hint` which is the domain that the user provided.
 
 ### Returned User fields
 

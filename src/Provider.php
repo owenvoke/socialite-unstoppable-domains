@@ -30,7 +30,7 @@ class Provider extends AbstractProvider
     /** {@inheritdoc} */
     protected function getTokenUrl()
     {
-        return $this->getBaseUrl().'/token';
+        return self::URL.'/token';
     }
 
     /** {@inheritdoc} */
