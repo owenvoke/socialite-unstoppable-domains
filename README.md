@@ -57,7 +57,10 @@ return Socialite::driver('unstoppable_domains')->with(['login_hint' => $domain])
 By default the `email:optional` scope is provided, if you want to require an email address to be returned, use the following:
 
 ```php
-return Socialite::driver('unstoppable_domains')->with(['login_hint' => $domain])->scopes(['email'])->redirect();
+return Socialite::driver('unstoppable_domains')
+    ->scopes(['email']) // This will override the `email:optional` scope
+    ->with(['login_hint' => $domain])
+    ->redirect();
 ```
 
 ### Returned User fields
