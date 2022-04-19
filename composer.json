@@ -6,12 +6,12 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-json": "*",
-        "socialiteproviders/manager": "~4.0"
+        "socialiteproviders/manager": "^4.1"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",
-        "phpstan/phpstan": "^1.2",
-        "symfony/var-dumper": "^5.3.8"
+        "phpstan/phpstan": "^1.5",
+        "symfony/var-dumper": "^5.4.6 || ^6.0"
     },
     "autoload": {
         "psr-4": {
