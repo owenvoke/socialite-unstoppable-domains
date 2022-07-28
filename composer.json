@@ -4,15 +4,15 @@
     "description": "An Unstoppable Domains provider for Laravel Socialite",
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.1",
         "ext-json": "*",
         "socialiteproviders/manager": "^4.1"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
-        "pestphp/pest": "^1.21",
-        "phpstan/phpstan": "^1.5",
-        "symfony/var-dumper": "^5.4.6 || ^6.0"
+        "pestphp/pest": "^1.21.3",
+        "phpstan/phpstan": "^1.8.2",
+        "symfony/var-dumper": "^6.0.9"
     },
     "autoload": {
         "psr-4": {
