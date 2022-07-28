@@ -10,6 +10,7 @@ use SocialiteProviders\Manager\OAuth2\User;
 class Provider extends AbstractProvider
 {
     public const IDENTIFIER = 'UNSTOPPABLE_DOMAINS';
+
     private const URL = 'https://auth.unstoppabledomains.com';
 
     /** {@inheritdoc} */
